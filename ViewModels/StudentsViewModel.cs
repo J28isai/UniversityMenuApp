@@ -1,32 +1,39 @@
 using CommunityToolkit.Mvvm.ComponentModel;
 using System.Collections.ObjectModel;
 using UniversityMenuApp.Models;
+using UniversityMenuApp.Repositories;
 
 namespace UniversityMenuApp.ViewModels;
 
-public partial class StudentsViewModel : ObservableObject 
+public partial class StudentsViewModel : ObservableObject
 {
 
-    public StudentsViewModel() { 
-    load();
-    
-    }  
+    private readonly IStudentRepository stdts;
+
+    public StudentsViewModel()
+    {
+        stdts = new StudentsRepository();      
+        LoadStudents();                        
+    }
 
     [ObservableProperty]
     private string formFullName = "";
+
     [ObservableProperty]
-    public string formEmail = "";
+    private string formEmail = "";
 
     public ObservableCollection<Student> Alumnos { get; } = new();
 
-    private void load()
+    private void LoadStudents()
     {
+        var lista = stdts.students();
         Alumnos.Clear();
-        Alumnos.Add(new Student { Id = 1236, FullName = "Edgar isai", Email = "Isai26361gmail.com" });
+        foreach (var ce in lista)
+            Alumnos.Add(ce);
     }
-
-
-
-
-
 }
+
+
+
+
+
