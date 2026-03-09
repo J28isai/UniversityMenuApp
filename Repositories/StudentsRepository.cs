@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DocumentFormat.OpenXml.Office2010.Excel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,18 +11,27 @@ namespace UniversityMenuApp.Repositories
     public class StudentsRepository : IStudentRepository
     {
 
-    
+   
 
-        public List<Student> students()
-        {
-            return new List<Student>
+         public List<Student> students = new List<Student>()
+              {
+                  new() { Id = 1236, FullName = "Edgar Isai", Email = "isai@gmail.com" }
+               };
+
+
+        public List<Student> Students()
             {
+                return students;
+            }
 
-                new() { Id = 1236, FullName = "Edgar isai", Email = "Isai26361gmail.com" },
-                 new() { Id = 11566, FullName = "Carvajal", Email = "juanito.com" }
+         public void AddStudent(Student student)
+              {
+                    students.Add(student);
+            }
 
-
-            };
+        public void DeleteStudent(Student student)
+        {
+                students.Remove(student);
         }
     }
 }

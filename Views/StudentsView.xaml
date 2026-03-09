@@ -7,17 +7,21 @@
         <TextBlock Margin="0,10,0,0" Text="Pantalla en construcción."/>
         <DataGrid ItemsSource="{Binding Alumnos}"
                   Margin="33,143,62,44"
-                  AutoGenerateColumns="False">
+                  AutoGenerateColumns="False"
+                  SelectedItem="{Binding Seleccionado}">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="60"/>
                 <DataGridTextColumn Header="Name" Binding="{Binding FullName}" Width="60"/>
                 <DataGridTextColumn Header="Email" Binding="{Binding Email}" Width="60"/>
             </DataGrid.Columns>
-            </DataGrid>
-            <TextBox TextWrapping="Wrap" Text="{Binding FormFullName, UpdateSourceTrigger=PropertyChanged}" Width="120" Margin="42,92,288,201" />
+        </DataGrid>
+        <TextBox TextWrapping="Wrap" Text="{Binding FormFullName, UpdateSourceTrigger=PropertyChanged}" Width="120" Margin="42,92,288,201" />
         <TextBox HorizontalAlignment="Left" Margin="225,92,0,0" TextWrapping="Wrap" Text="{Binding FormEmail, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.293,0.741"/>
         <Label Content="Nombre&#xD;&#xA;" HorizontalAlignment="Left" Margin="63,67,0,0" VerticalAlignment="Top"/>
         <Label Content="Email" HorizontalAlignment="Left" Height="25" Margin="243,67,0,0" VerticalAlignment="Top" Width="54"/>
+        <Button Content="Exportar" HorizontalAlignment="Left" Margin="285,272,0,0" VerticalAlignment="Top" Height="26" Command="{Binding ExportExelCommand}"/>
+        <Button Content="Agregar" HorizontalAlignment="Left" Margin="126,275,0,0" VerticalAlignment="Top" Command="{Binding AgregarCommand}"/>
+        <Button Content="Eliminar" HorizontalAlignment="Center" Margin="0,275,0,0" VerticalAlignment="Top" Command="{Binding BorrarCommand}"/>
 
 
     </Grid>
