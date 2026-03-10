@@ -22,15 +22,10 @@ namespace UniversityMenuApp.Repositories
 
                };
 
-         public List<Student> students = new List<Student>()
-              {
-                  new() { Id = 1236, FullName = "Edgar Isai", Email = "isai@gmail.com" }
-               };
-
 
         public List<Student> Students()
             {
-                return students;
+            return students;
             }
 
          public void AddStudent(Student student)

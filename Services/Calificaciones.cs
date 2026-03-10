@@ -7,7 +7,7 @@ using UniversityMenuApp.Repositories;
 
 namespace UniversityMenuApp.Services
 {
-    public partial class Calificaciones: ICalificacionesRepository
+    public partial class Calificaciones
     {
         public readonly IStudentRepository stdrepo;
 
