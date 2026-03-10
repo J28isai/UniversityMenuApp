@@ -13,5 +13,7 @@ namespace UniversityMenuApp.Repositories
         void AddStudent(Student student);
 
         void DeleteStudent(Student student);
+
+        
     }
 }

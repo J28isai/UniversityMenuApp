@@ -15,6 +15,15 @@ namespace UniversityMenuApp.Repositories
 
          public List<Student> students = new List<Student>()
               {
+                  new() { Id = 1, FullName = "David", Email = "David@gmail.com" },
+                  new() { Id = 2, FullName = "Mario", Email = "Mario@gmail.com" },
+                  new() { Id = 3, FullName = "Rita", Email = "Mario@gmail.com" }
+
+
+               };
+
+         public List<Student> students = new List<Student>()
+              {
                   new() { Id = 1236, FullName = "Edgar Isai", Email = "isai@gmail.com" }
                };
 
