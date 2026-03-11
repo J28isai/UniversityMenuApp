@@ -3,15 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UniversityMenuApp.Models;
 
 namespace UniversityMenuApp.Repositories
 {
     public interface ICalificacionesRepository
     {
-        public void NotapAlumno(int idAlumno, string nombreAlumno, int idAsignatura, string nombreAsignatura, int nota);
+        public List<Calificaciones> NotapAlumno(int idAlumno);
 
-        public void NotapAsignatura();
+        public List<Calificaciones> NotapAsignatura(int idAsignatura);
 
-        public void Promedio();
+        public void Promedio(int idAlumno);
     }
 }

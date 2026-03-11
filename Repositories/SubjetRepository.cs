@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DocumentFormat.OpenXml.Presentation;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,7 +8,7 @@ using UniversityMenuApp.Models;
 
 namespace UniversityMenuApp.Repositories
 {
-    public class SubjetRepository 
+    public class SubjetRepository : ISubjetRepository
     {
         public List<Subjet> subjets = new List<Subjet>()
         {
@@ -16,5 +17,12 @@ namespace UniversityMenuApp.Repositories
              new() { idAsig = 3, nombre = "sistemas" }
              
         };
+
+     ]
+
+        public List<Subjet> GetSubjets()
+        {
+            return subjets;
+        }
     }
 }

@@ -9,7 +9,7 @@ namespace UniversityMenuApp.Repositories
 {
     public partial interface IStudentRepository
     {
-       List<Student> Students();
+       List<Student> GetStudents();
        public void AddStudent(Student student);
 
        public void DeleteStudent(Student student);

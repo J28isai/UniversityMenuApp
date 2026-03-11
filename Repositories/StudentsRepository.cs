@@ -10,32 +10,27 @@ namespace UniversityMenuApp.Repositories
 {
     public class StudentsRepository : IStudentRepository
     {
+        private readonly List<Student> students = new()
+        {
+            new() { Id = 1, FullName = "David", Email = "David@gmail.com" },
+            new() { Id = 2, FullName = "Mario", Email = "Mario@gmail.com" },
+            new() { Id = 3, FullName = "Rita", Email = "Rita@gmail.com" },
+            new() { Id = 1236, FullName = "Edgar Isai", Email = "isai@gmail.com" }
+        };
 
-   
-
-         public List<Student> students = new List<Student>()
-              {
-                  new() { Id = 1, FullName = "David", Email = "David@gmail.com" },
-                  new() { Id = 2, FullName = "Mario", Email = "Mario@gmail.com" },
-                  new() { Id = 3, FullName = "Rita", Email = "Mario@gmail.com" }
-
-
-               };
-
-
-        public List<Student> Students()
-            {
+        public List<Student> GetStudents()
+        {
             return students;
-            }
+        }
 
-         public void AddStudent(Student student)
-              {
-                    students.Add(student);
-            }
+        public void AddStudent(Student student)
+        {
+            students.Add(student);
+        }
 
         public void DeleteStudent(Student student)
         {
-                students.Remove(student);
+            students.Remove(student);
         }
     }
 }

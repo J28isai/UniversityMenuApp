@@ -7,9 +7,9 @@ using UniversityMenuApp.Models;
 
 namespace UniversityMenuApp.Repositories
 {
-    public class AlumnoNotasRepository
+    public class AlumnoNotasRepository: IAlumnoNotasRepository
     {
-        public List<AlumnoNotas> AlumnoNotas = new List<AlumnoNotas>()
+        public List<AlumnoNotas> AlumnoNota = new List<AlumnoNotas>()
         {
              new() { idAlumno = 1, idAsignatura = 1, nota = 100 },
              new() { idAlumno = 1, idAsignatura = 2, nota = 90 },
@@ -21,6 +21,13 @@ namespace UniversityMenuApp.Repositories
              new() { idAlumno = 1, idAsignatura = 2, nota = 95 },
              new() { idAlumno = 1, idAsignatura = 3, nota = 95 },
         };
-              
+
+     
+
+      
+        public List<AlumnoNotas> GetAll()
+        {
+            return AlumnoNota;
+        }
     }
 }

@@ -9,7 +9,7 @@ namespace UniversityMenuApp.Repositories
 {
     public interface ISubjetRepository
     {
-        public List<Subjet> Subjets();
+        public List<Subjet> GetSubjets();
 
     }
 }

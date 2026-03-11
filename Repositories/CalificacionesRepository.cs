@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UniversityMenuApp.Repositories
 {
-    internal class CalificacionesRepository
+    public class CalificacionesRepository
     {
     }
 }
