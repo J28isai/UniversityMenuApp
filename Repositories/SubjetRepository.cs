@@ -18,7 +18,7 @@ namespace UniversityMenuApp.Repositories
              
         };
 
-     ]
+     
 
         public List<Subjet> GetSubjets()
         {

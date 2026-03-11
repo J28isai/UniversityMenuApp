@@ -3,8 +3,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:av="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="av" x:Class="UniversityMenuApp.Views.StudentsView"
              Height="359" Width="498">
     <Grid Margin="24">
-        <TextBlock Text="Mantenimiento de Alumnos" FontSize="15" FontWeight="SemiBold"/>
-        <TextBlock Margin="0,10,0,0" Text="Pantalla en construcción."/>
         <DataGrid ItemsSource="{Binding Alumnos}"
                   Margin="33,143,62,44"
                   AutoGenerateColumns="False"

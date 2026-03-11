@@ -71,9 +71,17 @@ namespace UniversityMenuApp.Services
             return resultado.Where(x => x.IdAsignatura == idAsignatura).ToList();
         }
 
-        public void Promedio(int idAlumno)
+        public double Promedio(int idAlumno)
         {
-            throw new NotImplementedException();
+            var notasAlumno = alurepo.GetAll()
+           .Where(x => x.idAlumno == idAlumno)
+           .ToList();
+
+            if (notasAlumno.Count == 0)
+                return 0;
+
+            return notasAlumno.Average(x => x.nota);
+
         }
     }
 }

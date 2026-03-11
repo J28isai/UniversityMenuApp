@@ -13,6 +13,6 @@ namespace UniversityMenuApp.Repositories
 
         public List<Calificaciones> NotapAsignatura(int idAsignatura);
 
-        public void Promedio(int idAlumno);
+        public double Promedio(int idAlumno);
     }
 }

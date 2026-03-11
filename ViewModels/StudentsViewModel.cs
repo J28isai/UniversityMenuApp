@@ -5,6 +5,7 @@ using Microsoft.Win32;
 using System.Collections.ObjectModel;
 using UniversityMenuApp.Models;
 using UniversityMenuApp.Repositories;
+using UniversityMenuApp.Services;
 
 namespace UniversityMenuApp.ViewModels;
 
@@ -60,7 +61,7 @@ public partial class StudentsViewModel : ObservableObject
     }
     private void LoadStudents()
     {
-        var lista = stdts.Students();
+        var lista = stdts.GetStudents();
         Alumnos.Clear();
         foreach (var ce in lista)
             Alumnos.Add(ce);
@@ -99,6 +100,11 @@ public partial class StudentsViewModel : ObservableObject
         wb.SaveAs(dialog.FileName);
 
 
+
+    }
+
+    private void notaspa()
+    {
 
     }
 
